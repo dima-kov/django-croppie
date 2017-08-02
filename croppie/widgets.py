@@ -1,7 +1,22 @@
 from django import forms
 
+import json
+
 
 class CroppieWidget(forms.FileInput):
+    template_name = 'croppie/widget.html'
+
+    def __init__(self, options=None, *args, **kwargs):
+        self.croppie_options = options
+        super(CroppieWidget, self).__init__(*args, **kwargs)
+
+    def get_context(self, name, value, attrs):
+        context = super(CroppieWidget, self).get_context(name, value, attrs)
+        context['widget'].update({
+            'croppie_options': json.dumps(self.croppie_options),
+        })
+        return context
+
     class Media:
         css = {
             'all': (
@@ -15,9 +30,9 @@ class CroppieWidget(forms.FileInput):
 
 
 class CroppieImageRatioWidget(forms.MultiWidget):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, options=None, *args, **kwargs):
         widgets = (
-            CroppieWidget(),
+            CroppieWidget(options=options),
             forms.HiddenInput(),
             forms.HiddenInput(),
             forms.HiddenInput(),

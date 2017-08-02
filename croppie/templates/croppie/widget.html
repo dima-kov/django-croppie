@@ -1,0 +1,9 @@
+{% include "django/forms/widgets/input.html" %}
+
+<script type="text/javascript">
+    {% if widget.croppie_options %}
+        var croppieOptions = {{ widget.croppie_options|safe }};
+    {% else %}
+        var croppieOptions = {};
+    {% endif %}
+</script>

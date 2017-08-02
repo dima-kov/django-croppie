@@ -1,8 +1,5 @@
-var cropper = $('#cropper').croppie({
-    viewport: { width: 250, height: 150 },
-    boundary: { width: 300, height: 200 },
-    showZoomer: true,
-});
+var cropper = $('#cropper').croppie(croppieOptions);
+
 
 function readFile(input) {
     if (input.files && input.files[0]) {
