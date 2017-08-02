@@ -14,7 +14,7 @@ setup(
     description='Django application for image cropping during upload',
     author='Dima Kovalchuk',
     author_email='dmyutro@ukr.net',
-    url='',
+    url='https://github.com/dima-kov/django-croppie',
     download_url='',
     keywords=['django', 'croppie', 'cropper', 'image-crop'],
     install_requires=[],
