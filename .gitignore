@@ -1,0 +1,8 @@
+dist/
+build/
+bin/
+develop-eggs/
+eggs/
+
+*.egg-info/
+*.pyc
