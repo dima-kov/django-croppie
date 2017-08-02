@@ -1,3 +1,5 @@
 include LICENSE.txt
 include README.md
-recursive-include croppie *.py *.html *.css *.js
+recursive-include croppie *.py
+recursive-include croppie/static *
+recursive-include croppie/templates *
