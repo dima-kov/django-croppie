@@ -2,9 +2,5 @@
 
 <script type="text/javascript">
     var croppieFieldName = "{{ croppie_field_name }}";
-    {% if widget.croppie_options %}
-        var croppieOptions = {{ widget.croppie_options|safe }};
-    {% else %}
-        var croppieOptions = {};
-    {% endif %}
+    var croppieOptions = {{ widget.croppie_options|safe }};
 </script>

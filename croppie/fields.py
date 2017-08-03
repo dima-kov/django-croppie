@@ -9,7 +9,7 @@ from croppie.widgets import CroppieImageRatioWidget
 
 class CroppieField(forms.MultiValueField):
 
-    def __init__(self, options=None, *args, **kwargs):
+    def __init__(self, options={}, widget=None, *args, **kwargs):
         fields = (
             forms.ImageField(),
             forms.CharField(),
@@ -17,7 +17,9 @@ class CroppieField(forms.MultiValueField):
             forms.CharField(),
             forms.CharField(),
         )
-        widget = CroppieImageRatioWidget(options=options)
+        if widget is None:
+            widget = CroppieImageRatioWidget(options=options)
+
         super(CroppieField, self).__init__(
             fields=fields, widget=widget, *args, **kwargs)
 

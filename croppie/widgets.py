@@ -6,7 +6,7 @@ import json
 class CroppieWidget(forms.FileInput):
     template_name = 'croppie/widget.html'
 
-    def __init__(self, options=None, *args, **kwargs):
+    def __init__(self, options, *args, **kwargs):
         self.croppie_options = options
         super(CroppieWidget, self).__init__(*args, **kwargs)
 
@@ -32,7 +32,7 @@ class CroppieWidget(forms.FileInput):
 
 
 class CroppieImageRatioWidget(forms.MultiWidget):
-    def __init__(self, options=None, *args, **kwargs):
+    def __init__(self, options, *args, **kwargs):
         widgets = (
             CroppieWidget(options=options),
             forms.HiddenInput(),
