@@ -12,8 +12,10 @@ class CroppieWidget(forms.FileInput):
 
     def get_context(self, name, value, attrs):
         context = super(CroppieWidget, self).get_context(name, value, attrs)
+        croppie_field_name = context['widget'].get('name').replace('_0', '')
         context['widget'].update({
             'croppie_options': json.dumps(self.croppie_options),
+            'croppie_field_name': croppie_field_name,
         })
         return context
 
