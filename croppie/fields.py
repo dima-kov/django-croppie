@@ -24,7 +24,8 @@ class CroppieField(forms.MultiValueField):
             fields=fields, widget=widget, *args, **kwargs)
 
     def compress(self, data_list):
-        data_image, *ratio = data_list
+        data_image = data_list[0]
+        ratio = data_list[1:]
         ratio = [int(i) for i in ratio]
         return self.crop_image(data_image, ratio)
 
