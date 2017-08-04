@@ -1,6 +1,6 @@
 {% include "django/forms/widgets/input.html" %}
 
 <script type="text/javascript">
-    var croppieFieldName = "{{ croppie_field_name }}";
+    var croppieFieldName = "{{ widget.croppie_field_name }}";
     var croppieOptions = {{ widget.croppie_options|safe }};
 </script>

@@ -13,14 +13,14 @@ function readFile(input) {
     }
 }
 
-var photoInput = document.getElementById('id_photo_0');
+var photoInput = document.getElementById('id_' + croppieFieldName + '_0');
 photoInput.addEventListener('change', function() {
     readFile(this);
 });
 
 element.addEventListener('update', function(cr) {
     var data = cropper.get();
-    var baseSelector = 'id_photo_';
+    var baseSelector = 'id_' + croppieFieldName + '_';
     var pointInput = null;
     for (var i = 1; i <= 4; i++) {
         pointInput = document.getElementById(baseSelector + i)
