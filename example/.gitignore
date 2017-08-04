@@ -1,0 +1,10 @@
+.idea/
+.env/
+env/
+media/
+
+db.sqlite3
+*.pyc
+.DS_Store
+django.mo
+celerybeat-schedule

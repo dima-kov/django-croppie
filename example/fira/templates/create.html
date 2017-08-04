@@ -1,0 +1,12 @@
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+</form>
+
+<hr>
+<div style="width:50%">
+    <div id="cropper"></div>
+</div>
+
+{{ form.media }}
