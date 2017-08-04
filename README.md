@@ -1,8 +1,8 @@
 # Django Croppie
 
-Django-croppie is an aplication for easy integration [croppie.js](https://github.com/Foliotek/Croppie) image cropper to django projects. 
+Django-croppie is an application for easy integration [croppie.js](https://github.com/Foliotek/Croppie) image cropper to django projects.
 
-# Instalation
+# Installation
 
 1. Install with `pip install django-croppie`
 
