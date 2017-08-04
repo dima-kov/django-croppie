@@ -63,4 +63,4 @@ Also `CroppieField` takes non required argument `options` - a python dictionary 
 
 # Example
 
-There is an example project in the `exmaple` directory. Read `README.md` for deploy instructions.
+There is an example project in the `example` directory. Read `README.md` for deploy instructions.
