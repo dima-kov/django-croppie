@@ -35,7 +35,8 @@ Also `CroppieField` takes non required argument `options` - a python dictionary 
             'viewport': {
                 'width': 120,
                 'height': 140,
-            }, 
+            },
+            'boundary': {
                 'width': 200,
                 'height': 220,
             },
