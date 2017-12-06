@@ -7,7 +7,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-croppie',
-    version='1.1',
+    version='1.2',
     packages=find_packages(),
     license='MIT',
     include_package_data=True,
@@ -15,7 +15,7 @@ setup(
     author='Dima Kovalchuk',
     author_email='dmyutro@ukr.net',
     url='https://github.com/dima-kov/django-croppie',
-    download_url='https://github.com/dima-kov/django-croppie/archive/v1.0.tar.gz',
+    download_url='https://github.com/dima-kov/django-croppie/archive/v1.2.tar.gz',
     keywords=[
         'python', 'django', 'croppie', 'croppie.js',
         'image-processing', 'image-cropping',
