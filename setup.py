@@ -7,15 +7,15 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-croppie',
-    version='1.2',
+    version='1.3',
     packages=find_packages(),
     license='MIT',
     include_package_data=True,
     description='Application for easy croppie.js integration to django',
     author='Dima Kovalchuk',
-    author_email='dmyutro@ukr.net',
+    author_email='dima.kovalchuk.v@gmail.com',
     url='https://github.com/dima-kov/django-croppie',
-    download_url='https://github.com/dima-kov/django-croppie/archive/v1.2.tar.gz',
+    download_url='https://github.com/dima-kov/django-croppie/archive/v1.3.tar.gz',
     keywords=[
         'python', 'django', 'croppie', 'croppie.js',
         'image-processing', 'image-cropping',
@@ -28,6 +28,7 @@ setup(
         'Framework :: Django :: 1.9',
         'Framework :: Django :: 1.10',
         'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
