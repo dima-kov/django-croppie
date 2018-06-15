@@ -1,7 +1,7 @@
 import django
 from django import forms
 
-if django.VERSION[1] < 11:
+if django.VERSION[0] <= 1 and django.VERSION[1] < 11:
     from .widgets_old import CroppieWidget
 else:
     from .widgets import CroppieWidget
