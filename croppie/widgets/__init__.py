@@ -10,11 +10,8 @@ else:
 class CroppieImageRatioWidget(forms.MultiWidget):
     def __init__(self, options, *args, **kwargs):
         widgets = (
-            CroppieWidget(options=options),
-            forms.HiddenInput(),
-            forms.HiddenInput(),
-            forms.HiddenInput(),
-            forms.HiddenInput(),
+            CroppieWidget(options=options, *args, **kwargs),
+            forms.HiddenInput()
         )
         super(CroppieImageRatioWidget, self).__init__(
             widgets=widgets,
