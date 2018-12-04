@@ -6,6 +6,9 @@ function readFile(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
+            cropper.bind({
+                url: e.target.result
+            });
             document.dispatchEvent(cropperCreatedEvent);
         }
         reader.readAsDataURL(input.files[0]);

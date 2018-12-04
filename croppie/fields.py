@@ -9,6 +9,8 @@ from PIL import Image
 
 from croppie.widgets import CroppieImageRatioWidget
 
+LOGGER = logging.getLogger(__name__)
+
 
 class CroppieField(forms.MultiValueField):
 
@@ -27,6 +29,7 @@ class CroppieField(forms.MultiValueField):
         if data_list:
             data_base64 = data_list[1]
             return self.unpack_image(data_base64)
+        LOGGER.warning("no image data")
 
     def unpack_image(self, base64_payload):
         """Convert base64 data to an image file"""
@@ -39,9 +42,9 @@ class CroppieField(forms.MultiValueField):
 
         return InMemoryUploadedFile(
             image_blob,
-            'avatar',
-            'uploaded_file.png'
-            'image/png',
+            'title_photo',
+            'uploaded_file.png',
+            content_type,
             None,
             None,
             None,
