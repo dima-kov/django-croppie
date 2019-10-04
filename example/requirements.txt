@@ -1,4 +1,4 @@
-Django==1.11.4
+Django==1.11.23
 django-croppie==0.1
 olefile==0.44
 Pillow==4.2.1
